@@ -47,6 +47,8 @@
 (setf (symbol-function 'pl-node?) #'pl-node-p)
 (setf (symbol-function 'pl-cons?) #'pl-cons-p)
 
+(defvar else t)
+
 (defun pl-node (val left right)
   (make-pl-node 
    :val val
