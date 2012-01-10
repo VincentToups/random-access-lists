@@ -268,7 +268,7 @@
 (defun ra-make-list (k &optional (obj 0))
   (named-let recur ((n k) (a ra-null))
 	(cond ((zero? n) a)
-		  (else 
+		  (:else 
 		   (let ((tr (largest-skew-binary n)))
 			 (recur (- n tr)
 					(pl-cons tr (tr-make-tree tr obj) a)))))))
